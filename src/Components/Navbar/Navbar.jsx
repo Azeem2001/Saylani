@@ -1,8 +1,9 @@
 import ThemeSwitch from "Components/ThemeSwitch/ThemeSwitch";
 import React from "react";
 import styled from "styled-components";
-
+import { useNavigate } from "react-router-dom";
 const Navbar = () => {
+  const navigate = useNavigate();
   return (
     <NavbarContainer>
       <ThemeSwitch />
@@ -12,9 +13,9 @@ const Navbar = () => {
         </Logo>
         <List>
           <UL>
-            <Li>Home</Li>
-            <Li>About</Li>
-            <Li>Services</Li>
+            <Li onClick={() => navigate("/")}>Home</Li>
+            <Li onClick={() => navigate("/about")}>About</Li>
+            <Li onClick={() => navigate("/service")}>Services</Li>
             <Li>Media</Li>
             <Li>Courses</Li>
           </UL>
@@ -62,7 +63,14 @@ const UL = styled.ul`
   list-style-type: none;
   width: 70%;
 `;
-const Li = styled.li`
+const Li = styled.button`
   font-family: "Inter-Medium";
   color: ${({ theme }) => theme.textLight};
+  background-color: transparent;
+  border: none;
+  font-size: 1.2rem;
+
+  :focus {
+    color: ${({ theme }) => theme.primary};
+  }
 `;

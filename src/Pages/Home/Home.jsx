@@ -91,6 +91,10 @@ const Item = styled.div`
 const Image = styled.img`
   width: 100%;
   height: 85vh;
+
+  @media only screen and (max-width: 768px) {
+    height: 30vh;
+  }
 `;
 const Wrapper = styled.div`
   margin-top: 1rem;
@@ -140,12 +144,22 @@ const Subheading = styled.h2`
   color: ${({ theme }) => theme.secondary};
   font-family: "inter-Light";
   letter-spacing: 1.5px;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2rem;
+    word-spacing: 1px;
+    letter-spacing: 1;
+  }
 `;
 const MainHeading = styled.h1`
   color: ${({ theme }) => theme.textLight};
   font-family: "inter-medium";
   word-spacing: 10px;
   letter-spacing: 2px;
+  @media only screen and (max-width: 768px) {
+    font-size: 1.5rem;
+    word-spacing: 5px;
+    letter-spacing: 1;
+  }
 `;
 const CarosalItem = styled.div`
   display: flex;
@@ -163,11 +177,19 @@ const Name = styled.h2`
   margin: 0;
   font-family: "inter-medium";
   color: ${({ theme }) => theme.textLight};
+  @media only screen and (max-width: 768px) {
+    font-size: 1.2rem;
+    text-align: center;
+  }
 `;
 const Post = styled.h3`
   margin: 0;
   color: ${({ theme }) => theme.textLight};
   font-family: "inter-light";
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem;
+    text-align: center;
+  }
 `;
 const Para = styled.p`
   font-size: 1.2rem;
@@ -176,6 +198,10 @@ const Para = styled.p`
   line-height: 1.8rem;
   color: ${({ theme }) => theme.textLight};
   font-family: "inter-light";
+
+  @media only screen and (max-width: 768px) {
+    font-size: 1rem;
+  }
 `;
 const CarouselItem = styled(Carousel)`
   background-color: ${({ theme }) => theme.backgroundLight};
