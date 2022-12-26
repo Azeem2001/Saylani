@@ -52,7 +52,6 @@ export default Footer;
 const FooterWrapper = styled.div`
   width: calc(100% - 4rem);
   height: 100%;
-  z-index: 10000;
   background-color: ${({ theme }) => theme.dark};
   position: relative;
   padding: 2rem;

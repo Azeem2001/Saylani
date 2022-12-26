@@ -125,6 +125,7 @@ const CarosalWrapper = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+  z-index: 0;
 `;
 const CustomCarosal = styled.div`
   width: 80%;
@@ -207,4 +208,5 @@ const CarouselItem = styled(Carousel)`
   background-color: ${({ theme }) => theme.backgroundLight};
   padding: 1.5rem;
   border-radius: 20px;
+  z-index: 0;
 `;

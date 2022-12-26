@@ -65,6 +65,35 @@ const CustomCard = ({ image, heading }) => {
               <Icon src="./Assets/saylani_logo.png" alt="logo" />
               <ErrHeading>Course Rigestration Form</ErrHeading>
               <Form />
+              <Content>
+                <Ol>
+                  <LI>
+                    I hereby, solemnly declare that the data and facts mentioned
+                    herein are true and correct to the best of my knowledge.
+                    Further, I will abide by all the established and future
+                    regulations and policies of SWIT
+                  </LI>
+                  <LI>
+                    I hereby accept the responsibilities of good conduct and
+                    guarantee that I will not be involved in any other activity,
+                    political or ethical, but learning during my stay in the
+                    program.
+                  </LI>
+                  <LI>
+                    Defiance will render my admission canceled at any point in
+                    time.
+                  </LI>
+                  <LI>
+                    Upon completion, of the course, I will complete the required
+                    project by SWIT.
+                  </LI>
+                  <LI>
+                    It's mandatory for female students to wear abaya/hijab in
+                    the class
+                  </LI>
+                </Ol>
+              </Content>
+
               <btnWrapper>
                 <Button onClick={() => setIsTrue(false)}>Click Me..</Button>
               </btnWrapper>
@@ -109,11 +138,18 @@ const CrossImage = styled.img`
 const CustomModal = styled.div`
   padding: 1rem;
   width: 60%;
+  height: 70vh;
+  overflow-y: auto;
+  ::-webkit-scrollbar {
+    display: none;
+    scroll-behavior: smooth;
+  }
   background: ${({ theme }) => theme.backgroundDark};
 
   border-radius: 8px;
 `;
 const Wrapper = styled.div`
+  width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,24 +167,22 @@ const ErrHeading = styled.h2`
 `;
 const btnWrapper = styled.div`
   width: 80%;
-  margin: 0 auto;
 `;
-const Message = styled.p`
-  margin: 0;
-  padding: 0;
-  font-size: 1rem;
-  line-height: 1rem;
-  letter-spacing: 1px;
-  font-family: "Inter-Medium";
-  margin: 1rem 0;
-  text-align: center;
-  color: ${({ theme }) => theme.grey};
-`;
+
 const Icon = styled.img`
   width: 30%;
   margin-bottom: 0.5rem;
 `;
-const Button = styled.button``;
+const Button = styled.button`
+  width: 500px;
+  background-color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.white};
+  font-weight: "inter-medium";
+  border-radius: 8px;
+  font-size: 1.5rem;
+  border: none;
+  height: 5vh;
+`;
 const Custombutton = styled.button`
   margin: 1rem 0;
   width: 40%;
@@ -160,4 +194,19 @@ const Custombutton = styled.button`
   border-radius: 8px;
   font-size: 0.8rem;
   font-family: "inter-medium";
+`;
+const Content = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+`;
+const Ol = styled.ol`
+  padding: 0 1rem;
+`;
+const LI = styled.li`
+  font-size: 1rem;
+  padding-top: 0.5rem;
+  font-family: "inter-medium";
+  color: ${({ theme }) => theme.textDark};
 `;

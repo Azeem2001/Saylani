@@ -16,8 +16,8 @@ const Navbar = () => {
             <Li onClick={() => navigate("/")}>Home</Li>
             <Li onClick={() => navigate("/about")}>About</Li>
             <Li onClick={() => navigate("/service")}>Services</Li>
-            <Li>Media</Li>
-            <Li>Courses</Li>
+            <Li onClick={() => navigate("/media")}>Media</Li>
+            <Li onClick={() => navigate("/courses")}>Courses</Li>
           </UL>
         </List>
       </ItemContainer>
