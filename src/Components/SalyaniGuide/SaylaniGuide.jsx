@@ -26,6 +26,11 @@ const Container = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    transform: translateY(120px);
+  }
 `;
 const GuideContainer = styled.div`
   width: 80%;
@@ -37,6 +42,9 @@ const Item1 = styled.div`
   height: 30vh;
   width: 100%;
   border-radius: 20px;
+  @media only screen and (max-width: 767px) {
+    height: 60vh;
+  }
 `;
 const Item2 = styled.div`
   height: 30vh;
@@ -49,15 +57,24 @@ const Item2 = styled.div`
   align-items: center;
   justify-content: flex-start;
   border-radius: 20px;
+  @media only screen and (max-width: 767px) {
+    height: 60vh;
+  }
 `;
 const Heading = styled.h1`
   font-size: 3rem;
   font-family: "inter-medium";
   color: ${({ theme }) => theme.textDark};
+  @media only screen and (max-width: 767px) {
+    font-size: 1.4rem;
+  }
 `;
 const InputSection = styled.div`
   display: flex;
   gap: 1.5rem;
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+  }
 `;
 const Input = styled.input`
   padding: 1.2rem;
@@ -67,7 +84,9 @@ const Input = styled.input`
   background: transparent;
   border-radius: 8px;
   color: ${({ theme }) => theme.textDark};
-
+  @media only screen and (max-width: 767px) {
+    width: calc(100% - 2.5rem);
+  }
   ::placeholder {
     color: ${({ theme }) => theme.textDark};
   }
@@ -83,6 +102,12 @@ const Button = styled.button`
   background: transparent;
   border: 1px solid ${({ theme }) => theme.border};
   color: ${({ theme }) => theme.textDark};
+
+  @media only screen and (max-width: 767px) {
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+  }
   :focus {
     border: 1px solid ${({ theme }) => theme.primary};
     color: ${({ theme }) => theme.primary};

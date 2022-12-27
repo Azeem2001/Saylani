@@ -55,15 +55,27 @@ const FooterWrapper = styled.div`
   background-color: ${({ theme }) => theme.dark};
   position: relative;
   padding: 2rem;
+  @media only screen and (max-width: 768px) {
+    padding: 1rem;
+    width: calc(100% - 2rem);
+  }
 `;
 const Footerimg = styled.img`
   width: 100%;
   height: fit-content;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 const FooterContainer = styled.div`
   width: calc(100% - 4rem);
   padding: 2rem;
   border-top: 2px solid ${({ theme }) => theme.textLight};
+
+  @media only screen and (max-width: 768px) {
+    padding: 0;
+    width: calc(100% - 3rem);
+  }
 `;
 const FooterItem = styled.div`
   width: 100%;
@@ -81,8 +93,10 @@ const FooterItem = styled.div`
     flex-direction: column;
     flex-wrap: wrap;
     align-items: flex-start;
-    width: 90%;
+    width: calc(100% - 2rem);
+    padding: 1rem;
     margin: 0;
+    position: relative;
   }
 `;
 const ItemOne = styled.div`
@@ -94,11 +108,17 @@ const ItemOne = styled.div`
   align-items: flex-start;
   @media only screen and (max-width: 768px) {
     flex-direction: column;
+    gap: 1rem;
+
     width: 100%;
   }
 `;
 const Image = styled.img`
   width: 90%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    transform: translateX(-15px);
+  }
 `;
 const ImageDiv = styled.div``;
 const LogoDiv = styled.div`
@@ -108,12 +128,16 @@ const LogoDiv = styled.div`
   width: 70%;
   @media only screen and (max-width: 768px) {
     width: 100%;
-    gap: 3rem;
   }
 `;
 const ImageLogo = styled.img`
   margin-left: 1rem;
   border-radius: 10px;
+  @media only screen and (max-width: 768px) {
+    width: 50px;
+    margin-right: 0.5rem;
+    margin-left: 0;
+  }
 `;
 const ItemTwo = styled.div`
   display: flex;

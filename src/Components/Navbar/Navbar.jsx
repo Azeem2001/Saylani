@@ -2,26 +2,33 @@ import ThemeSwitch from "Components/ThemeSwitch/ThemeSwitch";
 import React from "react";
 import styled from "styled-components";
 import { useNavigate } from "react-router-dom";
+import NavSm from "Components/NavMobile/NavSm";
+import { useState } from "react";
 const Navbar = () => {
   const navigate = useNavigate();
+  const [istrue, SetIsTrue] = useState(false);
   return (
-    <NavbarContainer>
-      <ThemeSwitch />
-      <ItemContainer>
-        <Logo>
-          <LogoImage src="./Assets/saylani_logo.png" alt="logo" />
-        </Logo>
-        <List>
-          <UL>
-            <Li onClick={() => navigate("/")}>Home</Li>
-            <Li onClick={() => navigate("/about")}>About</Li>
-            <Li onClick={() => navigate("/service")}>Services</Li>
-            <Li onClick={() => navigate("/media")}>Media</Li>
-            <Li onClick={() => navigate("/courses")}>Courses</Li>
-          </UL>
-        </List>
-      </ItemContainer>
-    </NavbarContainer>
+    <>
+      <NavbarContainer>
+        <ThemeSwitch />
+        <ItemContainer>
+          <Logo>
+            <LogoImage src="./Assets/saylani_logo.png" alt="logo" />
+          </Logo>
+          <List>
+            <UL>
+              <Li onClick={() => navigate("/")}>★ Home</Li>
+              <Li onClick={() => navigate("/about")}>★ About</Li>
+              <Li onClick={() => navigate("/service")}>★ Services</Li>
+              <Li onClick={() => navigate("/media")}>★ Media</Li>
+              <Li onClick={() => navigate("/courses")}>★ Courses</Li>
+            </UL>
+          </List>
+        </ItemContainer>
+      </NavbarContainer>
+
+      <NavSm />
+    </>
   );
 };
 
@@ -37,6 +44,9 @@ const NavbarContainer = styled.div`
   -webkit-box-shadow: -2px 20px 21px 1px ${({ theme }) => theme.shadowDark};
   -moz-box-shadow: -2px 20px 21px 1px ${({ theme }) => theme.shadowDark};
   z-index: 1000;
+  @media only screen and (max-width: 767px) {
+    display: none;
+  }
 `;
 const ItemContainer = styled.div`
   display: flex;

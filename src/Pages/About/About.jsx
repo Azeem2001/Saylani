@@ -122,6 +122,11 @@ const Container = styled.div`
   align-items: center;
   flex-direction: column;
   margin-top: 5rem;
+
+  @media only screen and (max-width: 767px) {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
 `;
 const Aboutimg = styled.div`
   width: 100%;
@@ -147,6 +152,18 @@ const Overlay = styled.div`
   border-radius: 25px;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    height: 85%;
+    top: 5rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 0;
+    justify-content: flex-start;
+    gap: 1rem;
+    width: calc(100% - 2rem);
+  }
 `;
 const LeftSide = styled.div`
   width: 45%;
@@ -154,10 +171,17 @@ const LeftSide = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const RightSide = styled.div`
   width: 45%;
   padding-top: 4.5rem;
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+    padding-top: 1rem;
+  }
 `;
 const Text = styled.p`
   font-family: "inter-medium";
@@ -165,6 +189,10 @@ const Text = styled.p`
   color: ${({ theme }) => theme.textLight};
   font-size: 1.2rem;
   line-height: 2rem;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 0.8rem;
+  }
 `;
 const Heading = styled.h1`
   margin: 0;
@@ -179,19 +207,36 @@ const MoreSection = styled.div`
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  @media only screen and (max-width: 767px) {
+    height: 100%;
+    transform: translateY(10rem);
+    width: 100%;
+
+    padding: 0 1rem;
+    padding-right: 0;
+  }
 `;
 const SaylaniEducation = styled.div`
   margin-top: 1rem;
+  @media only screen and (max-width: 767px) {
+    transform: translateY(180px);
+    width: 100%;
+    padding: 1rem;
+  }
 `;
 const EducationHeading = styled.li`
   list-style-type: circle;
   list-style-type: circle;
   font-size: 2rem;
   color: ${({ theme }) => theme.primary};
-
+  width: 100%;
   font-family: "inter-bold";
   ::marker {
     color: ${({ theme }) => theme.grey};
+  }
+  @media only screen and (max-width: 767px) {
+    font-size: 1.8rem;
+    list-style-type: none;
   }
 `;
 const Text1 = styled.p`
@@ -211,6 +256,12 @@ const List = styled.div`
   align-items: center;
   gap: 1.5rem;
   flex-wrap: wrap;
+
+  @media only screen and (max-width: 767px) {
+    flex-direction: column;
+    align-items: flex-start;
+    width: 100%;
+  }
 `;
 const ListItem = styled.p`
   display: flex;
@@ -222,6 +273,9 @@ const ListItem = styled.p`
   vertical-align: top;
   font-family: "inter-medium";
   color: ${({ theme }) => theme.textLight};
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
 `;
 const Span = styled.div`
   font-size: 1rem;

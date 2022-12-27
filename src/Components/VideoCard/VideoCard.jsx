@@ -123,7 +123,6 @@ const CustomModal = styled.div`
     scroll-behavior: smooth;
   }
   background: ${({ theme }) => theme.backgroundDark};
-
   border-radius: 8px;
 `;
 const CrossIconWrapper = styled.div`

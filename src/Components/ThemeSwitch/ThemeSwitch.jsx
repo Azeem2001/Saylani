@@ -54,20 +54,25 @@ const Wrapper = styled.div`
   margin-top: 0.7rem;
   width: 9rem;
   transform: translateX(-40px);
+
+  @media only screen and (max-width: 767px) {
+    padding: 0.5rem;
+    right: 0;
+    background-color: ${({ theme }) => theme.primary};
+    margin-top: 0;
+  }
 `;
 const Icon = styled(ReactSVG)`
   width: ${({ isMoon }) => (isMoon ? "1rem" : "1.4rem")};
   path {
     fill: ${({ isMoon, theme }) =>
       isMoon ? theme.white : theme.warning} !important;
-      
   }
 `;
 const Text = styled.h6`
   font-size: 16px;
   font-family: "Inter-Medium";
   color: ${({ theme, isLight }) => (isLight ? theme.warning : theme.white)};
-  /* margin-bottom: 0.1rem; */
   display: flex;
   align-items: flex-start;
   margin: auto;
